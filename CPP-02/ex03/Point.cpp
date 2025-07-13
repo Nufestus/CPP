@@ -1,50 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 19:56:35 by aammisse          #+#    #+#             */
-/*   Updated: 2025/07/10 20:56:18 by aammisse         ###   ########.fr       */
+/*   Created: 2025/07/11 17:25:48 by aammisse          #+#    #+#             */
+/*   Updated: 2025/07/11 17:37:18 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Point.hpp"
 
-const int Fixed::fract_point = 8;
-
-Fixed::Fixed() : fixed_point(0)
+Point::Point() : x(0), y(0)
 {
     std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::~Fixed()
+
+Point::Point(const float x, const float y) : x(x), y(y)
 {
-    std::cout << "Destructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed& other)
+
+Point::Point(const Point& other)
 {
     std::cout << "Copy constructor called" << std::endl;
     *this = other;
 }
 
-Fixed& Fixed::operator=(const Fixed& other)
+
+Point& Point::operator=(const Point& other)
 {
     std::cout << "Copy assignment operator called" << std::endl;
     if (this != &other)
-        this->fixed_point = other.getRawBits();
+        this->x = other.x;
     return (*this);
 }
 
-int Fixed::getRawBits( void ) const
+Point::~Point()
 {
-    std::cout << "getRawBits member function called" << std::endl;
-    return (this->fixed_point);
-}
-
-void Fixed::setRawBits( int const raw )
-{
-    this->fixed_point = raw;
+    std::cout << "Destructor called" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 15:25:23 by aammisse          #+#    #+#             */
-/*   Updated: 2025/06/28 15:48:05 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/07/09 20:29:56 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Zombie
         std::string name;
     public:
         Zombie(std::string name);
+        ~Zombie();
         void announce( void );
 };
 

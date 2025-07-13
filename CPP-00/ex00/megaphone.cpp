@@ -6,7 +6,7 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 09:14:55 by aammisse          #+#    #+#             */
-/*   Updated: 2025/06/29 15:56:57 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/07/03 20:07:28 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main(int ac, char **av)
         {
             int i = -1;
             while (av[j][++i])
-                av[j][i] = toupper(av[j][i]);
+                av[j][i] = std::toupper(av[j][i]);
             input += av[j];
             j++;
         }

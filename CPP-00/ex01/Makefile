@@ -6,7 +6,7 @@
 #    By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/24 09:15:58 by aammisse          #+#    #+#              #
-#    Updated: 2025/06/25 13:52:30 by aammisse         ###   ########.fr        #
+#    Updated: 2025/07/08 17:15:18 by aammisse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ all: ${NAME}
 ${NAME}: ${OBJS}
 	${C++} ${FLAGS} ${OBJS} -o $@
 
-%.o: %.cpp
+%.o: %.cpp Contact.hpp PhoneBook.hpp
 	${C++} ${FLAGS} -c $< -o $@
 
 clean:

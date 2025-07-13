@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/24 10:22:41 by aammisse          #+#    #+#             */
-/*   Updated: 2025/07/08 17:21:27 by aammisse         ###   ########.fr       */
+/*   Created: 2025/07/11 17:20:51 by aammisse          #+#    #+#             */
+/*   Updated: 2025/07/11 17:24:20 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#ifndef POINT_HPP
+#define POINT_HPP
 
-#include "Contact.hpp"
 #include <iostream>
-#include <iomanip>
-#include <cstdlib>
+#include "Fixed.hpp"
 
-class PhoneBook
+class Point
 {
     private:
-        Contact Contacts[8];
-        int count;
+        const Fixed x;
+        const Fixed y;
     public:
-        PhoneBook();
-        void    Add_Contact();
-        void    Search_Contact();
+        Point();
+        Point(const float x, const float y);
+        Point(const Point& other);
+        Point& operator=(const Point& other);
+        ~Point();
 };
 
 #endif

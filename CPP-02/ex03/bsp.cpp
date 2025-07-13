@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   bsp.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/24 10:22:41 by aammisse          #+#    #+#             */
-/*   Updated: 2025/07/08 17:21:27 by aammisse         ###   ########.fr       */
+/*   Created: 2025/07/11 17:23:49 by aammisse          #+#    #+#             */
+/*   Updated: 2025/07/11 17:25:22 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include "Point.hpp"
 
-#include "Contact.hpp"
-#include <iostream>
-#include <iomanip>
-#include <cstdlib>
-
-class PhoneBook
+bool bsp( Point const a, Point const b, Point const c, Point const point)
 {
-    private:
-        Contact Contacts[8];
-        int count;
-    public:
-        PhoneBook();
-        void    Add_Contact();
-        void    Search_Contact();
-};
-
-#endif
+    
+}

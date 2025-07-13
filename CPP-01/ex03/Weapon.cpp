@@ -6,7 +6,7 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 16:16:49 by aammisse          #+#    #+#             */
-/*   Updated: 2025/06/28 18:21:25 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/07/10 13:33:39 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Weapon::Weapon(std::string type) : type(type)
 {
+
 }
 
 const std::string& Weapon::getType() const

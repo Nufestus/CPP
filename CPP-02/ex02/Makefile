@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/06/25 20:20:55 by aammisse          #+#    #+#              #
-#    Updated: 2025/07/08 17:15:03 by aammisse         ###   ########.fr        #
+#    Created: 2025/06/29 10:19:46 by aammisse          #+#    #+#              #
+#    Updated: 2025/07/11 09:23:18 by aammisse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Account
+NAME = Fixed
 
 C++ = c++
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror
 
-SRCS = Account.cpp tests.cpp
+SRCS = main.cpp Fixed.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
@@ -25,7 +25,7 @@ all: ${NAME}
 ${NAME}: ${OBJS}
 	${C++} ${FLAGS} ${OBJS} -o $@
 
-%.o: %.cpp Account.hpp
+%.o: %.cpp
 	${C++} ${FLAGS} -c $< -o $@
 
 clean:

@@ -6,7 +6,7 @@
 #    By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/28 21:33:30 by aammisse          #+#    #+#              #
-#    Updated: 2025/06/30 14:25:41 by aammisse         ###   ########.fr        #
+#    Updated: 2025/07/10 11:01:03 by aammisse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Harl
 
 C++ = c++
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp Harl.cpp
 

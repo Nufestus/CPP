@@ -6,7 +6,7 @@
 #    By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/28 16:32:44 by aammisse          #+#    #+#              #
-#    Updated: 2025/06/28 16:33:33 by aammisse         ###   ########.fr        #
+#    Updated: 2025/07/10 11:01:15 by aammisse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Violence
 
 C++ = c++
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 

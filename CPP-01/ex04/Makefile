@@ -6,7 +6,7 @@
 #    By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/28 20:31:18 by aammisse          #+#    #+#              #
-#    Updated: 2025/06/30 14:26:04 by aammisse         ###   ########.fr        #
+#    Updated: 2025/07/10 11:02:06 by aammisse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Violence
 
 C++ = c++
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp
 
@@ -33,5 +33,6 @@ clean:
 
 fclean: clean
 	rm -rf ${NAME}
+	rm -rf *.replace
 
 re: fclean all

@@ -6,7 +6,7 @@
 #    By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/28 15:41:44 by aammisse          #+#    #+#              #
-#    Updated: 2025/06/28 16:04:25 by aammisse         ###   ########.fr        #
+#    Updated: 2025/07/10 11:01:55 by aammisse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = BrainzZHorde
 
 C++ = c++
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp Zombie.cpp zombieHorde.cpp
 

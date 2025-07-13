@@ -6,15 +6,14 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 10:25:00 by aammisse          #+#    #+#             */
-/*   Updated: 2025/06/29 13:41:16 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/07/02 18:15:51 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact()
+Contact::Contact() : filled(0)
 {
-    filled = 0;
 }
 
 std::string format_string(std::string str)

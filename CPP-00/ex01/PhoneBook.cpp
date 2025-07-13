@@ -6,7 +6,7 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 10:15:35 by aammisse          #+#    #+#             */
-/*   Updated: 2025/06/29 13:40:41 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/07/05 13:09:37 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void PhoneBook::Search_Contact()
 {
 	std::string input;
 
-	for(int i = 0; this->Contacts[i].filled; i++)
+	for(int i = 0; this->Contacts[i].filled && i < 8; i++)
 	{
 		std::cout << std::setw(10) << i << "|";
 		this->Contacts[i].display_info();

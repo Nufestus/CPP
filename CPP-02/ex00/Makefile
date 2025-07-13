@@ -6,15 +6,15 @@
 #    By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/29 10:19:46 by aammisse          #+#    #+#              #
-#    Updated: 2025/06/29 10:19:52 by aammisse         ###   ########.fr        #
+#    Updated: 2025/07/10 20:07:22 by aammisse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Harl
+NAME = Fixed
 
 C++ = c++
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp Fixed.cpp
 

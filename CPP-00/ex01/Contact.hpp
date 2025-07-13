@@ -6,7 +6,7 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 10:24:58 by aammisse          #+#    #+#             */
-/*   Updated: 2025/06/28 13:26:35 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/07/05 13:14:31 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <iostream>
 #include <iomanip>
-#include <cstdlib>
 
 class Contact
 {

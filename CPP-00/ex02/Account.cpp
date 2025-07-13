@@ -6,7 +6,7 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 16:54:18 by aammisse          #+#    #+#             */
-/*   Updated: 2025/06/27 21:40:46 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/07/08 17:22:03 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,9 @@ void Account::_displayTimestamp(void)
               << "] ";
 }
 
-Account::Account(int initial_deposit)
+Account::Account(int initial_deposit) : _amount(initial_deposit)
 {
     this->_accountIndex = Account::_nbAccounts;
-    this->_amount = initial_deposit;
     Account::_displayTimestamp();
     std::cout << "index:"
                 << this->_accountIndex << ";amount:"

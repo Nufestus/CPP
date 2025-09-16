@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/28 15:28:23 by aammisse          #+#    #+#             */
-/*   Updated: 2025/07/31 17:48:50 by aammisse         ###   ########.fr       */
+/*   Created: 2025/07/29 14:45:30 by aammisse          #+#    #+#             */
+/*   Updated: 2025/08/02 17:26:19 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "ScavTrap.hpp"
 
-void randomChump( std::string name )
+int main()
 {
-    Zombie Zomb(name);
-    Zomb.announce();
+    ClapTrap robot("Ahmed");
+    ScavTrap bombo("lool");
+
+    bombo.attack("Ahmed");
+    ScavTrap lol(bombo);
+    lol.attack("KOKO");
+    bombo.guardGate();
+    lol.guardGate();
+    robot.attack("KOKO");
+    robot.beRepaired(10);
+    robot.takeDamage(10);
 }

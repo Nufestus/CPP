@@ -6,7 +6,7 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 15:28:16 by aammisse          #+#    #+#             */
-/*   Updated: 2025/07/10 11:20:23 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/08/02 14:33:42 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 Zombie* newZombie( std::string name )
 {
     Zombie* Zomb;
-    try 
-    {
+    try {
         Zomb = new Zombie(name);
     }
-    catch (...)
-    {
+    catch (...) {
         std::cout << "Allocation Failed!" << std::endl;
+        return (NULL);
     }
     return (Zomb);
 }

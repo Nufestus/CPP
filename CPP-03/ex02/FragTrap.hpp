@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/28 15:28:23 by aammisse          #+#    #+#             */
-/*   Updated: 2025/07/31 17:48:50 by aammisse         ###   ########.fr       */
+/*   Created: 2025/08/02 17:13:14 by aammisse          #+#    #+#             */
+/*   Updated: 2025/08/02 17:16:23 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "ClapTrap.hpp"
 
-void randomChump( std::string name )
+class FragTrap : public ClapTrap
 {
-    Zombie Zomb(name);
-    Zomb.announce();
-}
+    public:
+        FragTrap();
+        FragTrap(std::string name);
+        FragTrap(const FragTrap& other);
+        FragTrap& operator=(const FragTrap& other);
+        void attack(const std::string& target);
+        void highFivesGuys(void);
+        ~FragTrap();
+};

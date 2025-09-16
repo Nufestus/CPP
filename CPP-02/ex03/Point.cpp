@@ -17,28 +17,33 @@ Point::Point() : x(0), y(0)
     std::cout << "Default constructor called" << std::endl;
 }
 
-
 Point::Point(const float x, const float y) : x(x), y(y)
 {
 }
 
-
-Point::Point(const Point& other)
+Point::Point(const Point& other) : x(other.x), y(other.y)
 {
     std::cout << "Copy constructor called" << std::endl;
-    *this = other;
 }
-
 
 Point& Point::operator=(const Point& other)
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    if (this != &other)
-        this->x = other.x;
+    (void)other;
     return (*this);
 }
 
 Point::~Point()
 {
     std::cout << "Destructor called" << std::endl;
+}
+
+const Fixed& Point::getX()
+{
+    return (this->x);
+}
+
+const Fixed& Point::getY()
+{
+    return (this->y);
 }

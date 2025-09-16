@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/06/25 20:20:55 by aammisse          #+#    #+#              #
-#    Updated: 2025/07/08 17:15:03 by aammisse         ###   ########.fr        #
+#    Created: 2025/07/29 14:48:32 by aammisse          #+#    #+#              #
+#    Updated: 2025/08/02 17:28:27 by aammisse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Account
+NAME = ClapTrap
 
-C++ = g++
+C++ = c++
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror
 
-SRCS = Account.cpp tests.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
@@ -25,7 +25,7 @@ all: ${NAME}
 ${NAME}: ${OBJS}
 	${C++} ${FLAGS} ${OBJS} -o $@
 
-%.o: %.cpp Account.hpp
+%.o: %.cpp
 	${C++} ${FLAGS} -c $< -o $@
 
 clean:

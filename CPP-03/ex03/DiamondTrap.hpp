@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Point.hpp                                          :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/11 17:20:51 by aammisse          #+#    #+#             */
-/*   Updated: 2025/07/11 17:24:20 by aammisse         ###   ########.fr       */
+/*   Created: 2025/08/02 17:30:39 by aammisse          #+#    #+#             */
+/*   Updated: 2025/08/04 20:26:22 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POINT_HPP
-#define POINT_HPP
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
 
-#include <iostream>
-#include "Fixed.hpp"
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
-class Point
+class DiamondTrap : public FragTrap, public ScavTrap
 {
     private:
-        const Fixed x;
-        const Fixed y;
+        std::string name;
     public:
-        Point();
-        Point(const float x, const float y);
-        Point(const Point& other);
-        Point& operator=(const Point& other);
-        ~Point();
-
-        const Fixed& getX();
-        const Fixed& getY();
+        DiamondTrap();
+        DiamondTrap(std::string name);
+        DiamondTrap(const DiamondTrap& other);
+        DiamondTrap& operator=(const DiamondTrap& other);
+        void attack(const std::string& target);
+        ~DiamondTrap();
 };
 
-bool bsp( Point const a, Point const b, Point const c, Point const point);
 
 #endif

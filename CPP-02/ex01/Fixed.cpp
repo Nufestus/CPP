@@ -2,15 +2,15 @@
 
 const int Fixed::fract_point = 8;
 
-std::ostream& operator<<(std::ostream& os, const Fixed& obj)
+std::ostream& operator<<(std::ostream& stream, const Fixed& obj)
 {
-    os << obj.toFloat();
-    return os;
+    stream << obj.toFloat();
+    return stream;
 }
 
 int Fixed::toInt() const
 {
-    return (fixed_point >> this->fract_point);
+    return (fixed_point >> fract_point);
 }
 
 float Fixed::toFloat() const

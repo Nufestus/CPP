@@ -10,18 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Point.hpp"
 
-int main( void )
+int main()
 {
-    Fixed a;
-    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << Fixed::max( a, b ) << std::endl;
+    Point a(0.0f, 0.0f);
+    Point b(10.0f, 0.0f);
+    Point c(5.0f, 10.0f);
+
+    Point inside(5.0f, 5.0f);
+    Point outside(15.0f, 5.0f);
+    Point edge(5.0f, 0.0f);
+
+    std::cout << "Point inside: " << (bsp(a, b, c, inside) ? "INSIDE" : "OUTSIDE") << std::endl;
+    std::cout << "Point outside: " << (bsp(a, b, c, outside) ? "INSIDE" : "OUTSIDE") << std::endl;
+    std::cout << "Point on edge: " << (bsp(a, b, c, edge) ? "INSIDE" : "OUTSIDE") << std::endl;
+
     return 0;
 }

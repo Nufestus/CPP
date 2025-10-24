@@ -6,7 +6,7 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 20:50:15 by aammisse          #+#    #+#             */
-/*   Updated: 2025/07/29 20:18:35 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/10/21 21:25:48 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ class Fixed
         int getRawBits( void ) const;
         void setRawBits( int const raw );
 };
-    int a;
-    a++;
+
 std::ostream& operator<<(std::ostream& os, const Fixed& obj);
 
 #endif

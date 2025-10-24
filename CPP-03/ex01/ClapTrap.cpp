@@ -6,7 +6,7 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 14:08:23 by aammisse          #+#    #+#             */
-/*   Updated: 2025/08/02 19:35:48 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/10/24 14:31:16 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,22 @@
 
 ClapTrap::ClapTrap() : HP(10), EP(10), AD(0)
 {
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default " << this->name << " constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string Name) : name(Name), HP(10), EP(10), AD(0)
+ClapTrap::ClapTrap(std::string name) : name(name), HP(10), EP(10), AD(0)
 {
-    std::cout << "Default constructor overload called" << std::endl;
+    std::cout << "Default " << this->name << " overload constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other)
 {
-    std::cout << "Copy constructor called" << std::endl;
     *this = other;
+    std::cout << "Copy " << this->name << " constructor called" << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
-    std::cout << "Copy assignment operator called" << std::endl;
     if (this != &other)
     {
         this->name = other.name;
@@ -43,7 +42,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "ClapTrap " << this->name << " Destructor called" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
@@ -62,6 +61,7 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
+    std::cout << "ClapTrap " << this->name << " took " << amount << " damage!" << std::endl;
     this->HP -= amount;
     if (this->HP < 0)
         this->HP = 0;
@@ -71,8 +71,9 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
     if (this->EP > 0)
     {
-        this->HP += amount;
         this->EP--;
+        this->HP += amount;
+        std::cout << "ClapTrap " << this->name << " got repaired and got " << amount << " HP back!" << std::endl;
     }
     else
         std::cout << "ClapTrap " << this->name << " has no energy to repair!" << std::endl;

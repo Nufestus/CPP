@@ -6,7 +6,7 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 14:45:30 by aammisse          #+#    #+#             */
-/*   Updated: 2025/07/29 14:48:20 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/10/24 12:17:46 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@ int main()
     ClapTrap bombo("KOKO");
 
     bombo.attack("Ahmed");
-    ClapTrap lol(robot);
-    lol.attack("KOKO");
-    robot.attack("KOKO");
+    robot.takeDamage(0);
     robot.beRepaired(10);
-    robot.takeDamage(10);
 }

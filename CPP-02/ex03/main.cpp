@@ -6,7 +6,7 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 09:23:47 by aammisse          #+#    #+#             */
-/*   Updated: 2025/07/11 14:38:10 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/10/04 12:19:42 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main()
 {
     Point a(0.0f, 0.0f);
     Point b(10.0f, 0.0f);
-    Point c(5.0f, 10.0f);
+    Point c(a);
 
     Point inside(5.0f, 5.0f);
     Point outside(15.0f, 5.0f);

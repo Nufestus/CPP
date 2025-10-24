@@ -6,13 +6,13 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 10:46:31 by aammisse          #+#    #+#             */
-/*   Updated: 2025/08/02 19:36:55 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/10/24 17:11:05 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() : ClapTrap()
+ScavTrap::ScavTrap()
 {
     this->HP = 100;
     this->EP = 50;
@@ -22,21 +22,21 @@ ScavTrap::ScavTrap() : ClapTrap()
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
+    this->name = name;
     this->HP = 100;
     this->EP = 50;
     this->AD = 20;
-    std::cout << "ScavTrap constructor overload called" << std::endl;
+    std::cout << "ScavTrap constructor " << this->name << " overload called" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& other)
+ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other)
 {
-    std::cout << "Copy ScavTrap constructor called" << std::endl;
     *this = other;
+    std::cout << "Copy ScavTrap " << this->name << " constructor called" << std::endl;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 {
-    std::cout << "Copy assignment operator called" << std::endl;
     if (this != &other)
     {
         this->name = other.name;
@@ -49,7 +49,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "ScavTrap Destructor called" << std::endl;
+    std::cout << "ScavTrap " << this->name << " Destructor called" << std::endl;
 }
 
 void ScavTrap::guardGate()

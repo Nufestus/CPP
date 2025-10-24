@@ -6,7 +6,7 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 14:45:30 by aammisse          #+#    #+#             */
-/*   Updated: 2025/08/02 17:29:33 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/10/24 17:07:07 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ int main()
 {
     ClapTrap robot("Ahmed");
     ScavTrap bombo("lool");
-
+    ClapTrap *obj = new ScavTrap("lol");
+    
+    delete obj;
     bombo.attack("Ahmed");
     ScavTrap lol(bombo);
     lol.attack("KOKO");

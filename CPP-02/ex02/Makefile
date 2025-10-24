@@ -6,7 +6,7 @@
 #    By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/29 10:19:46 by aammisse          #+#    #+#              #
-#    Updated: 2025/07/11 09:23:18 by aammisse         ###   ########.fr        #
+#    Updated: 2025/10/21 21:25:08 by aammisse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ all: ${NAME}
 ${NAME}: ${OBJS}
 	${C++} ${FLAGS} ${OBJS} -o $@
 
-%.o: %.cpp
+%.o: %.cpp Fixed.hpp
 	${C++} ${FLAGS} -c $< -o $@
 
 clean:

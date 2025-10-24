@@ -6,7 +6,7 @@
 #    By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/29 14:48:32 by aammisse          #+#    #+#              #
-#    Updated: 2025/07/29 14:48:49 by aammisse         ###   ########.fr        #
+#    Updated: 2025/10/24 17:09:44 by aammisse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ all: ${NAME}
 ${NAME}: ${OBJS}
 	${C++} ${FLAGS} ${OBJS} -o $@
 
-%.o: %.cpp
+%.o: %.cpp ClapTrap.hpp
 	${C++} ${FLAGS} -c $< -o $@
 
 clean:

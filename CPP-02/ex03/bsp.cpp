@@ -6,7 +6,7 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 17:23:49 by aammisse          #+#    #+#             */
-/*   Updated: 2025/07/11 17:25:22 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/10/21 20:18:47 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ float sign(Point p1, Point p2, Point p3)
 
 bool bsp( Point const a, Point const b, Point const c, Point const point)
 {
-    float d1 = sign(point, a, b);  
+    float d1 = sign(point, a, b);
     float d2 = sign(point, b, c);
     float d3 = sign(point, c, a);
 

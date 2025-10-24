@@ -6,7 +6,7 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 10:46:46 by aammisse          #+#    #+#             */
-/*   Updated: 2025/08/02 17:20:36 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/10/04 14:19:07 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap 
+class ScavTrap : public ClapTrap
 {
     public:
         ScavTrap();

@@ -6,13 +6,13 @@
 /*   By: aammisse <aammisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 3025/08/02 17:14:59 by aammisse          #+#    #+#             */
-/*   Updated: 2025/08/02 19:36:32 by aammisse         ###   ########.fr       */
+/*   Updated: 2025/10/24 17:44:34 by aammisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() : ClapTrap()
+FragTrap::FragTrap()
 {
     this->HP = 100;
     this->EP = 100;
@@ -22,21 +22,21 @@ FragTrap::FragTrap() : ClapTrap()
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
+    this->name = name;
     this->HP = 100;
     this->EP = 100;
     this->AD = 30;
-    std::cout << "FragTrap constructor overload called" << std::endl;
+    std::cout << "FragTrap " << this->name << " constructor overload called" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap& other)
+FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other)
 {
-    std::cout << "Copy FragTrap constructor called" << std::endl;
     *this = other;
+    std::cout << "Copy " << this->name << " FragTrap constructor called" << std::endl;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& other)
 {
-    std::cout << "Copy assignment operator called" << std::endl;
     if (this != &other)
     {
         this->name = other.name;
@@ -49,7 +49,7 @@ FragTrap& FragTrap::operator=(const FragTrap& other)
 
 FragTrap::~FragTrap()
 {
-    std::cout << "FragTrap Destructor called" << std::endl;
+    std::cout << "FragTrap " << this->name << " Destructor called" << std::endl;
 }
 
 void FragTrap::attack(const std::string& target)
@@ -57,7 +57,7 @@ void FragTrap::attack(const std::string& target)
     if (this->EP > 0)
     {
         this->EP--;
-        std::cout << "FragTrap " 
+        std::cout << "FragTrap "
                 << this->name << " attacks " 
                 << target << ", causing " 
                 << this->AD << " points of damage!" << std::endl;
